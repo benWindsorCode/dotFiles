@@ -10,9 +10,9 @@ Run ':PlugInstall' on first setup.
 
 # Bash
 On mac, the .bashrc will be replaced by .bash\_profile. To allow one .bashrc between linux and mac add the following to your .bash\_profile
-'''
+```
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
-'''
+```
 Then the .bashrc can be used on mac too, credit to [this blog](https://medium.com/@tzhenghao/a-guide-to-building-a-great-bashrc-23c52e466b1c).
