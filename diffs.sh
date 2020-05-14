@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ -f "~/.bashrc" ]; then
 	diff .bashrc ~/.bashrc
