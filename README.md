@@ -3,6 +3,11 @@ My personal dot files. This repo includes scripts to help maintain the dotfiles 
 - update\_repo.sh will copy scripts from host machine to repo folder
 - all\_diffs.sh will perform all diffs between repo files and files on local machine 
 
+# Install List
+To use the dotfiles install
+- ripgrep
+- silversearcher-ag 
+
 # Vim
 Standard ~/.vimrc setup, downloads vim-plug on first setup. Extra file ~/.vim/plugins.vim listing all vim-plug plugins to install, credit to [this blog](https://medium.com/@huntie/10-essential-vim-plugins-for-2018-39957190b7a9) for the idea.
 
