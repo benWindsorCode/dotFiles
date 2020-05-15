@@ -32,12 +32,16 @@ set number
 " Enable indenting per file type
 set autoindent
 filetype plugin indent on
+set shiftwidth=2
+set tabstop=2
 
 " Double the command and search patterns history
 set history=100
 
 " Enable syntax highlighting
 syntax on
+set background=dark
+colorscheme solarized
 
 " No beeping, blink instead
 " set visualbell
