@@ -51,7 +51,9 @@ nnoremap j gj
 nnoremap k gk
 
 " Intellij style ctrl+shift+N and ctrl+shift+f to enter fuzzy searches
+" VSCode outline ctrl+shift+O for tag list
 nnoremap <C-S-n> :FZF<Enter>
+nnoremap <C-S-o> :Tlist<Enter>
 inoremap <C-s-n> <Esc>:FZF<Enter>
 nnoremap <C-s-f> :RipgrepFzf<Enter>
 inoremap <C-s-f> <Esc>:RipgrepFzf<Enter>
@@ -59,9 +61,12 @@ inoremap <C-s-f> <Esc>:RipgrepFzf<Enter>
 " status bar
 set laststatus=2
 
-" open nerdtree if vim called with no args, put focus on editor
-autocmd VimEnter * if !argc() | NERDTree | wincmd p | endif
-
 " :FZF fuzzy search respects .gitignore N.B. requires  install of
 " silversearcher-ag
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
+" Tag list appears on right hand side
+let Tlist_Use_Right_Window = 1
+
+" open nerdtree if vim called with no args, put focus on editor
+autocmd VimEnter * if !argc() | NERDTree | Tlist | wincmd w | endif
