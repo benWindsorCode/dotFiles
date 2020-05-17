@@ -1,6 +1,7 @@
 # dotFiles
 My personal dot files. This repo includes scripts to help maintain the dotfiles between systems. In particular:
 - update\_repo.sh will copy scripts from host machine to repo folder
+- update\_local.sh will copy scripts from repo to host machine
 - all\_diffs.sh will perform all diffs between repo files and files on local machine 
 
 # Prerequisite Install List
