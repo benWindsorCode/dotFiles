@@ -70,3 +70,4 @@ let Tlist_Use_Right_Window = 1
 
 " open nerdtree if vim called with no args, put focus on editor
 autocmd VimEnter * if !argc() | NERDTree | Tlist | wincmd w | endif
+autocmd FileType java setlocal shiftwidth=4 tabstop=4
