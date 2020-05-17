@@ -3,7 +3,7 @@ My personal dot files. This repo includes scripts to help maintain the dotfiles 
 - update\_repo.sh will copy scripts from host machine to repo folder
 - all\_diffs.sh will perform all diffs between repo files and files on local machine 
 
-# Install List
+# Prerequisite Install List
 To use the dotfiles install:
 - ripgrep
 - silversearcher-ag 
