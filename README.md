@@ -4,6 +4,8 @@ My personal dot files. This repo includes scripts to help maintain the dotfiles 
 - update\_local.sh will copy scripts from repo to host machine
 - all\_diffs.sh will perform all diffs between repo files and files on local machine 
 
+N.B.: The abvoe scripts are still WIP, run at your own risk! The dotfiles themselves are all good though.
+
 # Prerequisite Install List
 To use the dotfiles install:
 - ripgrep
