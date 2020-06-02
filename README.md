@@ -25,7 +25,7 @@ Key Bindings:
 - ctrl+shift+O = vs code style file outline (tags plugin)
 
 # Bash
-On mac, the .bashrc will be replaced by .bash\_profile. To allow one .bashrc between linux and mac add the following to your .bash\_profile
+On mac, .bash\_profile is used instead of .bashrc. To allow one .bashrc between linux and mac add the following to your .bash\_profile
 ```
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
