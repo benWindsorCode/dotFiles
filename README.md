@@ -49,11 +49,11 @@ To setup Spacemacs on linux is easy:
 
 On windows a little more complex (Note if you want to avoid %Appdata% update your HOME env var):
 - Download Emacs
-- Clone the spacemacs repo into the %Appdata% emacs config folder
-- Add the below custom code into the .spacemacs folder in %Appdata%
-- For any file paths keep unix style forward slashes
+- Clone the spacemacs repo into the %Appdata% emacs config folder, .spacemacs will live in %Appdata%
 
-After setting up the above, add the above code into your .spacemacs under the 'defun dotspacemacs/user-config' section.
+You then need to make the following change to enable org-capture etc. gtd setup:
+- Enable the org layer for spacemacs by uncommenting 'org' from the .spacemacs file
+- Add the below snippet into your .spacemacs under the 'defun dotspacemacs/user-config' section, replacing paths to code folder as appropriate
 ```
 (with-eval-after-load 'org
   (setq org-directory "C:/Users/benja/Documents/code/orgFiles")
