@@ -76,6 +76,14 @@ You then need to make the following change to enable org-capture etc. gtd setup:
 ```
 (If you are just using standard emacs, you can use the above snippet just remove the outer with-eval-after-load 'org piece.)
 
+For daemon/server setup see: [link1](https://www.emacswiki.org/emacs/EmacsMsWindowsIntegration) and [link2](https://www.reddit.com/r/emacs/comments/1s9tfk/emacs_server_mode_on_windows/).
+
+Roughly on windows the idea is to create a shortcut with a command like:
+```
+"C:\Program Files (x86)\emacs-26.3-x86_64\bin\emacsclientw.exe" -c -n -a runemacs.exe
+```
+which will hook into an existing frame if its already open.
+
 # Gtd
 My getting things done setup is linked to Emacs and org-capture. There are three important pieces here:
 1) Org capture to pull tasks into an inbox file
