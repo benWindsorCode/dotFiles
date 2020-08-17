@@ -40,3 +40,38 @@ Extra Aliases:
 - status = git status
 - commit [message] = git -m commit [message]
 - code = cd ~/Documents/code, takes me to my folder where I keep all my repos
+
+# Emacs/Spacemacs
+To setup Spacemacs on linux is easy:
+- Download Emacs
+- Clone the spacemacs repo into the emacs  config directory
+- Add the below custom code into the ~/.spacemacs
+
+On windows a little more complex (Note if you want to avoid %Appdata% update your HOME env var):
+- Download Emacs
+- Clone the spacemacs repo into the %Appdata% emacs config folder
+- Add the below custom code into the .spacemacs folder in %Appdata%
+- For any file paths keep unix style forward slashes
+
+After setting up the above, add the above code into your .spacemacs under the 'defun dotspacemacs/user-config' section.
+```
+(with-eval-after-load 'org
+  (setq org-directory "C:/Users/benja/Documents/code/orgFiles")
+
+  (setq org-default-notes-file (concat org-directory "/gtd/inbox.org"))
+  (global-set-key (kbd "C-c l") 'org-store-link)
+  (global-set-key (kbd "C-c a") 'org-agenda)
+  (global-set-key (kbd "C-c c") 'org-capture)
+  (setq org-capture-templates '(("t" "Todo [inbox]" entry
+                               (file+headline "C:/Users/benja/Documents/code/orgFiles/gtd/inbox.org" "Tasks")
+                               "* TODO %i%?")
+                              ("T" "Tickler" entry
+                               (file+headline "C:/Users/benja/Documents/code/orgFiles/gtd/tickler.org" "Tickler")
+                               "* %i%? \n %U")))
+
+  (setq org-refile-targets '(("C:/Users/benja/Documents/code/orgFiles/gtd/gtd.org" :maxlevel . 3)
+                           ("C:/Users/benja/Documents/code/orgFiles/gtd/someday.org" :level . 1)
+                           ("C:/Users/benja/Documents/code/orgFiles/gtd/tickler.org" :maxlevel . 2)))
+)
+```
+If you are just using standard emacs, you can use the above snippet just remove the outer with-eval-after-load 'org piece.
