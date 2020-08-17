@@ -74,4 +74,12 @@ After setting up the above, add the above code into your .spacemacs under the 'd
                            ("C:/Users/benja/Documents/code/orgFiles/gtd/tickler.org" :maxlevel . 2)))
 )
 ```
-If you are just using standard emacs, you can use the above snippet just remove the outer with-eval-after-load 'org piece.
+(If you are just using standard emacs, you can use the above snippet just remove the outer with-eval-after-load 'org piece.)
+
+# Gtd
+My getting things done setup is linked to Emacs and org-capture. There are three important pieces here:
+1) Org capture to pull tasks into an inbox file
+2) The gtd.org file for projects, the tickler.org file for dated items and someday.org for tasks one day
+3) The org-agenda mode can then be used to view tasks as required. 
+
+Source: [this blog](https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html)
