@@ -42,9 +42,13 @@ Extra Aliases:
 - code = cd ~/Documents/code, takes me to my folder where I keep all my repos
 
 # Emacs/Spacemacs
-To setup Spacemacs on linux is easy:
-- Download Emacs
-- Clone the spacemacs repo into the emacs  config directory
+Spacemacs runs ontop of Emacs as an extra layer. To setup Spacemacs on linux is easy:
+- Download Emacs (dont launch it yet)
+```
+brew cask install emacs
+```
+- (Optional) Install [source code pro font](https://github.com/adobe-fonts/source-code-pro)
+- Clone the spacemacs repo into the emacs config directory
 ```
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 ```
