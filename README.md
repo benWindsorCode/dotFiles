@@ -45,7 +45,7 @@ Extra Aliases:
 Spacemacs runs ontop of Emacs as an extra layer. To setup Spacemacs on linux is easy:
 - Download Emacs (dont launch it yet)
 ```
-(MAC, add --no-quareantine flag if issues starting) brew cask install emacs
+(MAC, add --no-quareantine flag if issues starting) brew cask install emacs-plus --with-imagemagick
 (UBUNTU/other linux) use your standard package manager
 (Windows) https://www.gnu.org/software/emacs/download.html#nonfree
 ```
