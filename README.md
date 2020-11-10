@@ -45,7 +45,9 @@ Extra Aliases:
 Spacemacs runs ontop of Emacs as an extra layer. To setup Spacemacs on linux is easy:
 - Download Emacs (dont launch it yet)
 ```
-brew cask install emacs
+(MAC) brew cask install emacs
+(UBUNTU/other linux) use your standard package manager
+(Windows) https://www.gnu.org/software/emacs/download.html#nonfree
 ```
 - (Optional) Install [source code pro font](https://github.com/adobe-fonts/source-code-pro)
 - Clone the spacemacs repo into the emacs config directory
