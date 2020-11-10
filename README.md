@@ -45,6 +45,9 @@ Extra Aliases:
 To setup Spacemacs on linux is easy:
 - Download Emacs
 - Clone the spacemacs repo into the emacs  config directory
+```
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+```
 - Add the below custom code into the ~/.spacemacs
 
 On windows a little more complex (Note if you want to avoid %Appdata% update your HOME env var):
