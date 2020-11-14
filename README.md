@@ -119,16 +119,28 @@ Roughly on windows the idea is to create a shortcut with a command like:
 ```
 which will hook into an existing frame if its already open.
 
-# Org Roam
+# Org Roam (Doom Emacs)
 To visualise your graph (SPC n r g) you will need graphviz installed. 
 
-On Mac
+On Mac for example use
 
 ```
 brew install graphviz
 ```
 
 You can jump back to a previous link with M-x org-mark-ring-goto.
+
+SPC n r b - see org roam buffers
+SPC n r r - activate org roam sidebar
+SPC n r i - insert org roam link
+SPC n r c - capture org roam in scratch buffer
+
+# Git (Doom Emacs)
+Doom emacs uses the magit plugin. Once inside a project with git enabled the rough flow is as follows:
+- SPC g g to open magi
+- select files for staging with s
+- c c to commit
+- p u to push to master
 
 # Gtd
 My getting things done setup is linked to Emacs and org-capture. There are three important pieces here:
