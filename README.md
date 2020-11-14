@@ -42,6 +42,7 @@ Extra Aliases:
 - code = cd ~/Documents/code, takes me to my folder where I keep all my repos
 
 # Emacs/Spacemacs/Doom Emacs
+## Spacemacs
 Spacemacs and Doom Emacs run ontop of Emacs as an extra layer. To setup Spacemacs:
 - Download Emacs (dont launch it yet)
 ```
@@ -59,7 +60,7 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 On windows a little more complex, just use WSL2 to avoid this (Note if you want to avoid %Appdata% update your HOME env var):
 - Download Emacs
 - Clone the spacemacs repo into the %Appdata% emacs config folder, .spacemacs will live in %Appdata%
-
+## Doom Emacs
 For Doom Emacs, follow the above to get emacs working (emacs-plus on mac) then:
 - Clone doom emacs into your config directory and install
 ``` 
@@ -73,9 +74,10 @@ cd ~/.emacs.d/bin
 ./doom sync
 ```
 
+## Customisation
 You then need to make the following change to enable org-capture etc. gtd setup:
-- Enable the org layer for spacemacs by uncommenting 'org' from the .spacemacs file
-- Add the below snippet into your .spacemacs under the 'defun dotspacemacs/user-config' section, replacing paths to code folder as appropriate
+- Enable the org layer for spacemacs by uncommenting 'org' from the .spacemacs file/uncommenting org in ~/.doom.d/init.el
+- Add the below snippet into your .spacemacs under the 'defun dotspacemacs/user-config' section, replacing paths to code folder as appropriate/in your ~/.doom.d/config.el
 ```
 (with-eval-after-load 'org
   (setq org-directory "C:/Users/benja/Documents/code/orgFiles")
@@ -97,7 +99,10 @@ You then need to make the following change to enable org-capture etc. gtd setup:
 )
 ```
 (If you are just using standard emacs, you can use the above snippet just remove the outer with-eval-after-load 'org piece.)
-
+- For doom project management you may also want to add to your ~/.doom.d/config.el
+```
+(setq projectile-project-search-path '("~/Documents/code/"))
+```
 For daemon/server setup see: [link1](https://www.emacswiki.org/emacs/EmacsMsWindowsIntegration) and [link2](https://www.reddit.com/r/emacs/comments/1s9tfk/emacs_server_mode_on_windows/).
 
 Roughly on windows the idea is to create a shortcut with a command like:
