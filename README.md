@@ -41,8 +41,8 @@ Extra Aliases:
 - commit [message] = git -m commit [message]
 - code = cd ~/Documents/code, takes me to my folder where I keep all my repos
 
-# Emacs/Spacemacs
-Spacemacs runs ontop of Emacs as an extra layer. To setup Spacemacs on linux is easy:
+# Emacs/Spacemacs/Doom Emacs
+Spacemacs and Doom Emacs run ontop of Emacs as an extra layer. To setup Spacemacs:
 - Download Emacs (dont launch it yet)
 ```
 (MAC, add --no-quareantine flag if issues starting) brew cask install emacs-plus --with-imagemagick
@@ -56,9 +56,22 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 ```
 - Add the below custom code into the ~/.spacemacs
 
-On windows a little more complex (Note if you want to avoid %Appdata% update your HOME env var):
+On windows a little more complex, just use WSL2 to avoid this (Note if you want to avoid %Appdata% update your HOME env var):
 - Download Emacs
 - Clone the spacemacs repo into the %Appdata% emacs config folder, .spacemacs will live in %Appdata%
+
+For Doom Emacs, follow the above to get emacs working (emacs-plus on mac) then:
+- Clone doom emacs into your config directory and install
+``` 
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+```
+- Enable any extra packages you want in ~/.doom.d/init.el
+- Install the packages by running
+``` 
+cd ~/.emacs.d/bin
+./doom sync
+```
 
 You then need to make the following change to enable org-capture etc. gtd setup:
 - Enable the org layer for spacemacs by uncommenting 'org' from the .spacemacs file
