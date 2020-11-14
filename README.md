@@ -74,6 +74,13 @@ cd ~/.emacs.d/bin
 ./doom sync
 ```
 
+From here you can then select a project with 'SPC p p', and SPC SPC to search within that project. If you need project discovery to run use M-x projectile-discover-projects-in-search-path.
+
+Magit from within the project accessed with SPC g g, then use s to stage files for commit, c c to commit, p u to push to master (use ? to see other commands here).
+
+Fantastic detailed doom config here: https://github.com/sunnyhasija/Academic-Doom-Emacs-Config
+Which detaisl the flow from these gifs for notating papers: https://www.reddit.com/r/emacs/comments/hltl69/org_roam_for_academics_demo/
+
 ## Customisation
 You then need to make the following change to enable org-capture etc. gtd setup:
 - Enable the org layer for spacemacs by uncommenting 'org' from the .spacemacs file/uncommenting org in ~/.doom.d/init.el
@@ -119,6 +126,8 @@ On Mac
 ```
 brew install graphviz
 ```
+
+You can jump back to a previous link with M-x org-mark-ring-goto.
 
 # Gtd
 My getting things done setup is linked to Emacs and org-capture. There are three important pieces here:
