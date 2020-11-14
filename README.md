@@ -111,6 +111,15 @@ Roughly on windows the idea is to create a shortcut with a command like:
 ```
 which will hook into an existing frame if its already open.
 
+# Org Roam
+To visualise your graph (SPC n r g) you will need graphviz installed. 
+
+On Mac
+
+```
+brew install graphviz
+```
+
 # Gtd
 My getting things done setup is linked to Emacs and org-capture. There are three important pieces here:
 1) Org capture to pull tasks into an inbox file
