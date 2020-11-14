@@ -1,0 +1,99 @@
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+
+    "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+
+    "profiles":
+    {
+        "defaults":
+        {
+            // Put settings here that you want to apply to all profiles
+            "acrylicOpacity": 0.1
+        },
+        "list":
+        [
+            {
+                // Make changes here to the powershell.exe profile
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false,
+                "useAcrylic": true,
+                "colorScheme": "Zenburn"
+            },
+            {
+                // Make changes here to the cmd.exe profile
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "cmd",
+                "commandline": "cmd.exe",
+                "hidden": false
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "colorScheme": "Solarized Darcula",
+                "name": "Ubuntu-20.04",
+                "source": "Windows.Terminal.Wsl"
+            }
+        ]
+    },
+
+    // Add custom color schemes to this array
+    "schemes": [
+        {
+            "name": "Solarized Darcula",
+            "black": "#25292a",
+            "red": "#f24840",
+            "green": "#629655",
+            "yellow": "#b68800",
+            "blue": "#2075c7",
+            "purple": "#797fd4",
+            "cyan": "#15968d",
+            "white": "#d2d8d9",
+            "brightBlack": "#25292a",
+            "brightRed": "#f24840",
+            "brightGreen": "#629655",
+            "brightYellow": "#b68800",
+            "brightBlue": "#2075c7",
+            "brightPurple": "#797fd4",
+            "brightCyan": "#15968d",
+            "brightWhite": "#d2d8d9",
+            "background": "#222324",
+            "foreground": "#d2d8d9"
+        },
+        {
+            "name": "Zenburn",
+            "black": "#4d4d4d",
+            "red": "#705050",
+            "green": "#60b48a",
+            "yellow": "#f0dfaf",
+            "blue": "#506070",
+            "purple": "#dc8cc3",
+            "cyan": "#8cd0d3",
+            "white": "#dcdccc",
+            "brightBlack": "#709080",
+            "brightRed": "#dca3a3",
+            "brightGreen": "#c3bf9f",
+            "brightYellow": "#e0cf9f",
+            "brightBlue": "#94bff3",
+            "brightPurple": "#ec93d3",
+            "brightCyan": "#93e0e3",
+            "brightWhite": "#ffffff",
+            "background": "#3f3f3f",
+            "foreground": "#dcdccc"
+        }
+    ],
+
+    // Add any keybinding overrides to this array.
+    // To unbind a default keybinding, set the command to "unbound"
+    "keybindings": []
+}
