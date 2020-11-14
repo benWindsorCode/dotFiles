@@ -81,6 +81,7 @@ Magit from within the project accessed with SPC g g, then use s to stage files f
 Fantastic detailed doom config here: https://github.com/sunnyhasija/Academic-Doom-Emacs-Config
 Which detaisl the flow from these gifs for notating papers: https://www.reddit.com/r/emacs/comments/hltl69/org_roam_for_academics_demo/
 
+See doom emacs packages here: https://github.com/hlissner/doom-emacs/blob/develop/docs/modules.org
 ## Customisation
 You then need to make the following change to enable org-capture etc. gtd setup:
 - Enable the org layer for spacemacs by uncommenting 'org' from the .spacemacs file/uncommenting org in ~/.doom.d/init.el
