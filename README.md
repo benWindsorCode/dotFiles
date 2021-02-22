@@ -74,6 +74,7 @@ cd ~/.emacs.d/bin
 ./doom sync
 ```
 
+### Projects and Magit
 From here you can then select a project with 'SPC p p', and SPC SPC to search within that project. If you need project discovery to run use M-x projectile-discover-projects-in-search-path.
 
 Magit from within the project accessed with SPC g g, then use s to stage files for commit, c c to commit, p u to push to master (use ? to see other commands here).
@@ -119,6 +120,9 @@ Roughly on windows the idea is to create a shortcut with a command like:
 ```
 which will hook into an existing frame if its already open.
 
+# Org Mode (Doom Emacs)
+SPC m q - insert tag ([useful video](https://www.youtube.com/watch?v=FJq__bBi0nI&ab_channel=ZaisteProgramming))
+
 # Org Roam (Doom Emacs)
 To visualise your graph (SPC n r g) you will need graphviz installed. 
 
@@ -135,7 +139,7 @@ SPC n r r - activate org roam sidebar
 SPC n r i - insert org roam link
 SPC n r c - capture org roam in scratch buffer
 
-# Git (Doom Emacs)
+# Git/Magit (Doom Emacs)
 Doom emacs uses the magit plugin. Once inside a project with git enabled the rough flow is as follows:
 - SPC g g to open magi
 - select files for staging with s
