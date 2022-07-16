@@ -156,4 +156,8 @@ Note you can export to command line your org agenda with
 ```
 emacs --batch -l ~/.doom.d/config.el --eval '(org-batch-agenda "a" org-agenda-span (quote month))'
 ```
+or as a csv
+```
+emacs --batch -l ~/.doom.d/config.el --eval '(org-batch-agenda-csv "a" org-agenda-span (quote month))'
+```
 Source: [this blog](https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html)
