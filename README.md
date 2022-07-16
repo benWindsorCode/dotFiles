@@ -152,4 +152,8 @@ My getting things done setup is linked to Emacs and org-capture. There are three
 2) The gtd.org file for projects, the tickler.org file for dated items and someday.org for tasks one day
 3) The org-agenda mode can then be used to view tasks as required. 
 
+Note you can export to command line your org agenda with
+```
+emacs -batch -l ~/.emacs -eval '(org-batch-agenda "t")' | lpr
+```
 Source: [this blog](https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html)
