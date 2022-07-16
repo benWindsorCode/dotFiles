@@ -163,6 +163,8 @@ emacs --batch -l ~/.doom.d/config.el --eval '(org-batch-agenda-csv "a" org-agend
 ```
 Source: [this blog](https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html)
 ## Html export
+Youll need the htmlize package.
+
 Html export is done via two pieces, firstly you must provide html file names per agenda mode: https://orgmode.org/manual/Exporting-Agenda-Views.html 
 
 e.g.
