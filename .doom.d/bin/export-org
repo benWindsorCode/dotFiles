@@ -1,0 +1,7 @@
+#!/usr/bin/env doomscript
+
+(defcli! export-org ()
+        (require 'core-start)
+        (org-store-agenda-views))
+
+(run! "export-org" (cdr (member "--" argv)))
