@@ -152,6 +152,7 @@ My getting things done setup is linked to Emacs and org-capture. There are three
 2) The gtd.org file for projects, the tickler.org file for dated items and someday.org for tasks one day
 3) The org-agenda mode can then be used to view tasks as required. 
 
+## Csv export
 Note you can export to command line your org agenda with
 ```
 emacs --batch -l ~/.doom.d/config.el --eval '(org-batch-agenda "a" org-agenda-span (quote month))'
@@ -161,3 +162,33 @@ or as a csv
 emacs --batch -l ~/.doom.d/config.el --eval '(org-batch-agenda-csv "a" org-agenda-span (quote month))'
 ```
 Source: [this blog](https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html)
+## Html export
+Html export is done via two pieces, firstly you must provide html file names per agenda mode: https://orgmode.org/manual/Exporting-Agenda-Views.html 
+
+e.g.
+```
+  (setq org-agenda-custom-commands
+        '(("n" agenda "" nil ("agenda.html"))))
+```
+If vanilla emacs then you can use emacs --batch --eval '(org-store-agenda-views), NOTE: youll need to either pass a '-l' emacs init file to identify your 'org-agenda-files' or you can set it in the cmd .
+
+However if using doom emacs, you have another option, to create your own doomscript per this issue: https://github.com/doomemacs/doomemacs/issues/6494 and these examples https://gist.github.com/hlissner/ba8c3b4c6f37c24ff27b72194942b7aa
+
+e.g. in ~/.doom.d/bin/export-org
+```
+#!/usr/bin/env doomscript
+
+(defcli! export-org ()
+        (require 'core-start)
+        (org-store-agenda-views))
+
+(run! "export-org" (cdr (member "--" argv)))
+```
+Then you need to 
+```
+chmod +x export-org
+```
+Then you can finally:
+```
+doomscript ~/.doom.d/bin/export-org
+```
