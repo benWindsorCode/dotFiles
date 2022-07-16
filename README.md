@@ -192,3 +192,9 @@ Then you can finally:
 ```
 doomscript ~/.doom.d/bin/export-org
 ```
+## Errors of style '/usr/bin/env: ‘bash\r’: No such file or directory'
+Error with windows/linux formatting of lines, fix using
+``` 
+dos2unix [filename]
+```
+https://stackoverflow.com/questions/18172405/getting-error-usr-bin-env-sh-no-such-file-or-directory-when-running-command-p
