@@ -47,6 +47,12 @@
                            ("~/Documents/code/orgFiles/gtd/tickler.org" :maxlevel . 2)))
 )
 
+(setq org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(i)" "|" "DONE(d)" "CANCELLED(c)")))
+
+(global-set-key (kbd "C-c l") #'org-store-link)
+(global-set-key (kbd "C-c a") #'org-agenda)
+(global-set-key (kbd "C-c c") #'org-capture)
+
 ;; Persist window size accross sessions
 ;; https://github.com/hlissner/doom-emacs/blob/develop/docs/api.org#center-emacs-initial-frame-with-a-fixed-size
 (when-let (dims (doom-store-get 'last-frame-size))
