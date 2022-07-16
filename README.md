@@ -154,6 +154,6 @@ My getting things done setup is linked to Emacs and org-capture. There are three
 
 Note you can export to command line your org agenda with
 ```
-emacs -batch -l ~/.emacs -eval '(org-batch-agenda "t")' | lpr
+emacs --batch -l ~/.doom.d/config.el --eval '(org-batch-agenda "a" org-agenda-span (quote month))'
 ```
 Source: [this blog](https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html)
