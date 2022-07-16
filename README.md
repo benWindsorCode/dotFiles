@@ -192,6 +192,15 @@ Then you can finally:
 ```
 doomscript ~/.doom.d/bin/export-org
 ```
+OR if you have the following in your ~/.bashrc 
+```
+export PATH="$HOME/.emacs.d/bin":$PATH
+export PATH="$HOME/.doom.d/bin":$PATH
+```
+you can just run
+```
+export-org
+```
 ## Errors of style '/usr/bin/env: ‘bash\r’: No such file or directory'
 Error with windows/linux formatting of lines, fix using
 ``` 
