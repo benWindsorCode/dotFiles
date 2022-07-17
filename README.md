@@ -47,6 +47,8 @@ Extra Aliases:
 | -- | -- | -- |
 | Save | C-x C-s | :q |
 | Open | C-x C-f | SPC SPC |
+| Split Window Below | C-x 2 | - |
+| Focus On Other Window | C-x o | - |
 | Org Capture | C-c c | SPC X |
 | Org Agenda | C-c a | SPC o A |
 | Org Schedule | C-c C-s | - |
