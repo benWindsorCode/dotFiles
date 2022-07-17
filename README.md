@@ -53,24 +53,8 @@ Extra Aliases:
 | Org Tag | C-c C-c | - |
 | Org Timestamp | C-c . | |
 | Change Project | - | SPC p p |
-## Spacemacs
-Spacemacs and Doom Emacs run ontop of Emacs as an extra layer. To setup Spacemacs:
-- Download Emacs (dont launch it yet)
-```
-(MAC, add --no-quareantine flag if issues starting) brew cask install emacs-plus --with-imagemagick
-(UBUNTU/other linux) use your standard package manager
-(Windows) https://www.gnu.org/software/emacs/download.html#nonfree
-```
-- (Optional) Install [source code pro font](https://github.com/adobe-fonts/source-code-pro)
-- Clone the spacemacs repo into the emacs config directory
-```
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-```
-- Add the below custom code into the ~/.spacemacs
 
-On windows a little more complex, just use WSL2 to avoid this (Note if you want to avoid %Appdata% update your HOME env var):
-- Download Emacs
-- Clone the spacemacs repo into the %Appdata% emacs config folder, .spacemacs will live in %Appdata%
+Note: all normal emacs commands work in Doom Emacs as long as you are in Normal mode
 ## Doom Emacs
 For Doom Emacs, follow the above to get emacs working (emacs-plus on mac) then:
 - Clone doom emacs into your config directory and install
@@ -220,3 +204,22 @@ Error with windows/linux formatting of lines, fix using
 dos2unix [filename]
 ```
 https://stackoverflow.com/questions/18172405/getting-error-usr-bin-env-sh-no-such-file-or-directory-when-running-command-p
+
+## Spacemacs (DEPRECATED for my setup)
+Spacemacs and Doom Emacs run ontop of Emacs as an extra layer. To setup Spacemacs:
+- Download Emacs (dont launch it yet)
+```
+(MAC, add --no-quareantine flag if issues starting) brew cask install emacs-plus --with-imagemagick
+(UBUNTU/other linux) use your standard package manager
+(Windows) https://www.gnu.org/software/emacs/download.html#nonfree
+```
+- (Optional) Install [source code pro font](https://github.com/adobe-fonts/source-code-pro)
+- Clone the spacemacs repo into the emacs config directory
+```
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+```
+- Add the below custom code into the ~/.spacemacs
+
+On windows a little more complex, just use WSL2 to avoid this (Note if you want to avoid %Appdata% update your HOME env var):
+- Download Emacs
+- Clone the spacemacs repo into the %Appdata% emacs config folder, .spacemacs will live in %Appdata%
