@@ -121,20 +121,27 @@ which will hook into an existing frame if its already open.
 SPC m q - insert tag ([useful video](https://www.youtube.com/watch?v=FJq__bBi0nI&ab_channel=ZaisteProgramming))
 
 # Org Roam (Doom Emacs)
-To visualise your graph (SPC n r g) you will need graphviz installed. 
+SPC n r b - see org roam buffers
+SPC n r r - activate org roam sidebar
+SPC n r i - insert org roam link
+SPC n r c - capture org roam in scratch buffer
+You can jump back to a previous link with M-x org-mark-ring-goto.
+
+Easiest way to see your graph is via org-roam-ui: https://github.com/org-roam/org-roam-ui
+Once installed then run:
+
+``` 
+M-x org-roam-ui-mode
+```
+And go to http://127.0.0.1:35901/ for an interactive view of your graph.
+
+Another option is to generate a graph via graphviz (SPC n r g) you will need graphviz installed. 
 
 On Mac for example use
 
 ```
 brew install graphviz
 ```
-
-You can jump back to a previous link with M-x org-mark-ring-goto.
-
-SPC n r b - see org roam buffers
-SPC n r r - activate org roam sidebar
-SPC n r i - insert org roam link
-SPC n r c - capture org roam in scratch buffer
 
 # Git/Magit (Doom Emacs)
 Doom emacs uses the magit plugin. Once inside a project with git enabled the rough flow is as follows:

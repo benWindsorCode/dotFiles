@@ -8,6 +8,7 @@
 (setq user-full-name "Ben Windsor"
       user-mail-address "benjaminwindsor@hotmail.com")
 
+(setq browse-url-generic-program "/mnt/c/Program Files \(x86\)/Google/Chrome/Application/chrome.exe")
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
 ;; - `doom-font' -- the primary font to use
@@ -41,6 +42,7 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Documents/code/personalMonorepo/org")
 (setq gtd-directory (concat org-directory "/gtd"))
+(setq roam-directory (concat org-directory "/roam"))
 (setq inbox-file (concat gtd-directory "/inbox.org"))
 (setq tickler-file (concat gtd-directory "/tickler.org"))
 (setq gtd-file (concat gtd-directory "/gtd.org"))
@@ -50,6 +52,10 @@
 (setq projectile-project-search-path '("~/Documents/code/"))
 ;; NOTE: this is NOT recursive, you have to explicitly specify sub directories OR use (setq org-agenda-file (directory-files-recursively org-directory))
 (setq org-agenda-files (list org-directory gtd-directory))
+(setq org-roam-directory (file-truename roam-directory))
+
+;; Run roam functions on file changes to maintain note consistency. Disable if slowdown.
+(org-roam-db-autosync-mode)
 
 (with-eval-after-load 'org
 
@@ -65,7 +71,18 @@
                            (tickler-file :maxlevel . 2)))
 
   (setq org-agenda-custom-commands
-	'(("n" agenda "" nil ("agenda.html"))))
+	'(("a" agenda "" nil ("agenda.html"))
+	  ("n" "Simple agenda view" ((agenda "") (alltodo "")) nil ("agenda_joint.html"))
+	  ("w" "Weekly summary"
+           ((agenda ""
+                    ((org-agenda-ndays 10)))
+            (alltodo ""
+                     ((org-agenda-ndays 10)
+                      (org-agenda-span 3)))
+            (todo "DONE"
+                    ((org-agenda-ndays 10))))
+           nil
+           ("agenda_week.html"))))
 )
 
 (setq org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(i)" "|" "DONE(d)" "CANCELLED(c)")))
@@ -73,6 +90,21 @@
 (global-set-key (kbd "C-c l") #'org-store-link)
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c c") #'org-capture)
+
+(use-package! websocket
+  :after org-roam)
+
+(use-package! org-roam-ui
+    :after org-roam ;; or :after org
+;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
+;;         a hookable mode anymore, you're advised to pick something yourself
+;;         if you don't care about startup time, use
+;;  :hook (after-init . org-roam-ui-mode)
+    :config
+    (setq org-roam-ui-sync-theme t
+          org-roam-ui-follow t
+          org-roam-ui-update-on-save t
+          org-roam-ui-open-on-start t))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.

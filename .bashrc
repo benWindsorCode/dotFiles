@@ -8,3 +8,6 @@ alias master='git checkout master'
 
 export PATH="$HOME/.emacs.d/bin":$PATH
 export PATH="$HOME/.doom.d/bin":$PATH
+
+# On WSL2 makes org roam ui not complain
+export BROWSER="powershell.exe /C start"
