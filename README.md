@@ -42,6 +42,17 @@ Extra Aliases:
 - code = cd ~/Documents/code, takes me to my folder where I keep all my repos
 
 # Emacs/Spacemacs/Doom Emacs
+## Keybind Reminders
+| Command | Emacs | Doom Emacs |
+| -- | -- | -- |
+| Save | C-x C-s | :q |
+| Open | C-x C-f | SPC SPC |
+| Org Capture | C-c c | SPC X |
+| Org Agenda | C-c a | SPC o A |
+| Org Schedule | C-c C-s | - |
+| Org Tag | C-c C-c | - |
+| Org Timestamp | C-c . | |
+| Change Project | - | SPC p p |
 ## Spacemacs
 Spacemacs and Doom Emacs run ontop of Emacs as an extra layer. To setup Spacemacs:
 - Download Emacs (dont launch it yet)
