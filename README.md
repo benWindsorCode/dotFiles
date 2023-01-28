@@ -41,6 +41,18 @@ Extra Aliases:
 - commit [message] = git -m commit [message]
 - code = cd ~/Documents/code, takes me to my folder where I keep all my repos
 
+# Ubuntu setup
+Basic install list:
+- gcc
+- make
+- emacs
+- vim
+- intellij/pycharm/etc.
+
+Quality of life:
+- install gnome tweaks and disable https://www.linuxuprising.com/2018/09/how-to-disable-mouse-acceleration-in.html
+- for tiling windows install tiling-assistant https://github.com/Leleat/Tiling-Assistant
+
 # Emacs/Spacemacs/Doom Emacs
 ## Keybind Reminders
 | Command | Emacs | Doom Emacs |
