@@ -52,6 +52,7 @@ Basic install list:
 Quality of life:
 - install gnome tweaks and disable https://www.linuxuprising.com/2018/09/how-to-disable-mouse-acceleration-in.html
 - for tiling windows install tiling-assistant https://github.com/Leleat/Tiling-Assistant
+- zsh + oh my zsh + powerlevel10k
 
 # Emacs/Spacemacs/Doom Emacs
 ## Keybind Reminders
