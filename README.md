@@ -53,6 +53,11 @@ Quality of life:
 - install gnome tweaks and disable https://www.linuxuprising.com/2018/09/how-to-disable-mouse-acceleration-in.html
 - for tiling windows install tiling-assistant https://github.com/Leleat/Tiling-Assistant
 - zsh + oh my zsh + powerlevel10k
+- piper (mouse mapping)
+
+For mouse vol up/down:
+- in ubuntu keyboard settings map volume up and volume down to ctrl+alt+up/down respectively
+- in Piper map the two mouse buttons to these key sequences and they will then trigger vol up/down
 
 # Emacs/Spacemacs/Doom Emacs
 ## Keybind Reminders
