@@ -88,6 +88,18 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 cd ~/.emacs.d/bin
 ./doom sync
 ```
+- Install fonts with M-x nerd-icons-install-fonts (on windows then doubel click on the font file after it loads) 
+- Note: if you face issues with freezes when you open a file or run magit on mac its to do with gpg and you need to 
+
+``` shell
+brew install gnupg@2.2
+```
+Then update your /etc/paths file to add
+
+``` shell
+/usr/local/opt/gnupg@2.2/
+~/.config/emacs/bin
+```
 
 ### Projects and Magit
 From here you can then select a project with 'SPC p p', and SPC SPC to search within that project. If you need project discovery to run use M-x projectile-discover-projects-in-search-path.
