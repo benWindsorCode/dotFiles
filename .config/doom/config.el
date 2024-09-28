@@ -103,7 +103,7 @@
         :desc "Org refile" "w" #'org-refile))
 
 (after! org
-  (setq org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(i)" "|" "DONE(d)" "CANCELLED(c)")))
+  (setq org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(i)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
   )
 
 (use-package! org-roam
@@ -116,8 +116,8 @@
         :desc "Org roam ref find" "r" #'org-roam-ref-find
         :desc "Org roam show graph" "g" #'org-roam-show-graph
         :desc "Org roam capture" "c" #'org-roam-capture)
-  (setq org-roam-directory (file-truename "~/Documents/code/personalMonorepo/org/roam")
-        org-id-link-to-org-use-id t)
+  (setq org-roam-directory (file-truename "~/Documents/code/personalMonorepo/org/roam"))
+     ;;   org-id-link-to-org-use-id t) ;; I disabled this as it added an id to all my org captures
   :config
   (org-roam-db-autosync-mode +1)
   (set-popup-rules!
@@ -158,6 +158,8 @@
       (error "")))
   (setq org-roam-node-display-template
         (concat "${type:15} ${title:*} " (propertize "${tags:10}" 'face 'org-tag))))
+
+(set-file-template! 'org-mode :ignore t)
 
 (use-package! websocket
     :after org-roam)
