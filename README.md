@@ -147,8 +147,17 @@ Roughly on windows the idea is to create a shortcut with a command like:
 ```
 which will hook into an existing frame if its already open.
 
+# Org Latex Export
+You need prerequisites
+
+``` shell
+sudo apt install texlive
+sudo apt install texlive-latex-extra
+```
+
 # Org Mode (Doom Emacs)
 SPC m q - insert tag ([useful video](https://www.youtube.com/watch?v=FJq__bBi0nI&ab_channel=ZaisteProgramming))
+SPC m e - org export dispatch
 
 # Org Roam (Doom Emacs)
 SPC n r b - see org roam buffers
