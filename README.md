@@ -1,16 +1,18 @@
-# dotFiles
+# Dot Files
 My personal dot files. This repo includes scripts to help maintain the dotfiles between systems. In particular:
-- update\_repo.sh will copy scripts from host machine to repo folder
-- update\_local.sh will copy scripts from repo to host machine
-- all\_diffs.sh will perform all diffs between repo files and files on local machine 
+- dotfile_utils\\update\_repo.sh will copy scripts from host machine to repo folder
+- dotfile_utils\\update\_local.sh will copy scripts from repo to host machine
+- dotfile_utils\\diffs.sh will perform all diffs between repo files and files on local machine 
 
-N.B.: The abvoe scripts are still WIP, run at your own risk! The dotfiles themselves are all good though.
+N.B.: The above scripts are still WIP, run at your own risk! The dotfiles themselves are all good though.
 
 # Prerequisite Install List
 To use the dotfiles install:
 - ripgrep
 - silversearcher-ag 
 - ctags
+- texlive (for org export)
+- texlive-latex-extra (for org export)
 
 # Vim
 Standard ~/.vimrc setup, downloads vim-plug on first setup. Extra file ~/.vim/plugins.vim listing all vim-plug plugins to install, credit to [this blog](https://medium.com/@huntie/10-essential-vim-plugins-for-2018-39957190b7a9) for the idea.
@@ -89,6 +91,12 @@ cd ~/.emacs.d/bin
 ./doom sync
 ```
 - Install fonts with M-x nerd-icons-install-fonts (on windows then doubel click on the font file after it loads) 
+### Doom Emacs Mac
+- Install emacs first with 
+
+``` shell
+brew install emacs-plus
+```
 - Note: if you face issues with freezes when you open a file or run magit on mac its to do with gpg and you need to 
 
 ``` shell
@@ -101,11 +109,11 @@ Then update your /etc/paths file to add
 ~/.config/emacs/bin
 ```
 
-### Projects and Magit
-From here you can then select a project with 'SPC p p', and SPC SPC to search within that project. If you need project discovery to run use M-x projectile-discover-projects-in-search-path.
-
-Magit from within the project accessed with SPC g g, then use s to stage files for commit, c c to commit, p u to push to master (use ? to see other commands here).
-
+### Projects 
+- SPC p p = select a project
+- SPC p a = add a new project
+- SPC p i = refresh the project file cache
+- SPC SPC = search within a project
 Fantastic detailed doom config here: https://github.com/sunnyhasija/Academic-Doom-Emacs-Config
 Which detaisl the flow from these gifs for notating papers: https://www.reddit.com/r/emacs/comments/hltl69/org_roam_for_academics_demo/
 
@@ -188,6 +196,7 @@ Doom emacs uses the magit plugin. Once inside a project with git enabled the rou
 - select files for staging with s
 - c c to commit
 - p u to push to master
+- F p to pull from master
 
 # Gtd
 My getting things done setup is linked to Emacs and org-capture. There are three important pieces here:
