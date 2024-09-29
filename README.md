@@ -109,44 +109,7 @@ Then update your /etc/paths file to add
 ~/.config/emacs/bin
 ```
 
-### Projects 
-- SPC p p = select a project
-- SPC p a = add a new project
-- SPC p i = refresh the project file cache
-- SPC SPC = search within a project
-Fantastic detailed doom config here: https://github.com/sunnyhasija/Academic-Doom-Emacs-Config
-Which detaisl the flow from these gifs for notating papers: https://www.reddit.com/r/emacs/comments/hltl69/org_roam_for_academics_demo/
-
-See doom emacs packages here: https://github.com/hlissner/doom-emacs/blob/develop/docs/modules.org
-## Customisation
-You then need to make the following change to enable org-capture etc. gtd setup:
-- Enable the org layer for spacemacs by uncommenting 'org' from the .spacemacs file/uncommenting org in ~/.doom.d/init.el
-- Add the below snippet into your .spacemacs under the 'defun dotspacemacs/user-config' section, replacing paths to code folder as appropriate/in your ~/.doom.d/config.el
-```
-(with-eval-after-load 'org
-  (setq org-directory "C:/Users/benja/Documents/code/orgFiles")
-
-  (setq org-default-notes-file (concat org-directory "/gtd/inbox.org"))
-  (global-set-key (kbd "C-c l") 'org-store-link)
-  (global-set-key (kbd "C-c a") 'org-agenda)
-  (global-set-key (kbd "C-c c") 'org-capture)
-  (setq org-capture-templates '(("t" "Todo [inbox]" entry
-                               (file+headline "C:/Users/benja/Documents/code/orgFiles/gtd/inbox.org" "Tasks")
-                               "* TODO %i%?")
-                              ("T" "Tickler" entry
-                               (file+headline "C:/Users/benja/Documents/code/orgFiles/gtd/tickler.org" "Tickler")
-                               "* %i%? \n %U")))
-
-  (setq org-refile-targets '(("C:/Users/benja/Documents/code/orgFiles/gtd/gtd.org" :maxlevel . 3)
-                           ("C:/Users/benja/Documents/code/orgFiles/gtd/someday.org" :level . 1)
-                           ("C:/Users/benja/Documents/code/orgFiles/gtd/tickler.org" :maxlevel . 2)))
-)
-```
-(If you are just using standard emacs, you can use the above snippet just remove the outer with-eval-after-load 'org piece.)
-- For doom project management you may also want to add to your ~/.doom.d/config.el
-```
-(setq projectile-project-search-path '("~/Documents/code/"))
-```
+## Daemon
 For daemon/server setup see: [link1](https://www.emacswiki.org/emacs/EmacsMsWindowsIntegration) and [link2](https://www.reddit.com/r/emacs/comments/1s9tfk/emacs_server_mode_on_windows/).
 
 Roughly on windows the idea is to create a shortcut with a command like:
@@ -162,12 +125,22 @@ You need prerequisites
 sudo apt install texlive
 sudo apt install texlive-latex-extra
 ```
+## Doom Emacs Shortcuts
+### Projectile (Doom Emacs) 
+- SPC p p = select a project
+- SPC p a = add a new project
+- SPC p i = refresh the project file cache
+- SPC SPC = search within a project
+Fantastic detailed doom config here: https://github.com/sunnyhasija/Academic-Doom-Emacs-Config
+Which detaisl the flow from these gifs for notating papers: https://www.reddit.com/r/emacs/comments/hltl69/org_roam_for_academics_demo/
 
-# Org Mode (Doom Emacs)
+See doom emacs packages here: https://github.com/hlissner/doom-emacs/blob/develop/docs/modules.org
+
+### Org Mode (Doom Emacs)
 SPC m q - insert tag ([useful video](https://www.youtube.com/watch?v=FJq__bBi0nI&ab_channel=ZaisteProgramming))
 SPC m e - org export dispatch
 
-# Org Roam (Doom Emacs)
+### Org Roam (Doom Emacs)
 SPC n r b - see org roam buffers
 SPC n r r - activate org roam sidebar
 SPC n r i - insert org roam link
@@ -190,7 +163,7 @@ On Mac for example use
 brew install graphviz
 ```
 
-# Git/Magit (Doom Emacs)
+### Git/Magit (Doom Emacs)
 Doom emacs uses the magit plugin. Once inside a project with git enabled the rough flow is as follows:
 - SPC g g to open magi
 - select files for staging with s
