@@ -1,0 +1,26 @@
+#+TITLE: Doom Emacs Literate Config
+#+PROPERTY: header-args :tangle .bashrc
+#+AUTHOR: Ben Windsor
+* Aliases
+Various aliases make life easier for lazy commandline git usage
+#+begin_src shell
+alias code='cd ~/Documents/code'
+alias status='git status'
+alias add='git add .'
+alias commit='git commit -m'
+alias push='git push'
+alias pull='git pull'
+alias master='git checkout master'
+#+end_src
+* PATH
+** Emacs
+So that 'doom' commandline tool works
+#+begin_src shell
+export PATH="$HOME/.emacs.d/bin":$PATH
+export PATH="$HOME/.doom.d/bin":$PATH
+#+end_src
+* WSL
+#+begin_src shell
+# On WSL2 makes org roam ui not complain
+export BROWSER="powershell.exe /C start"
+#+end_src
