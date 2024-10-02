@@ -46,6 +46,7 @@ The idea is that the config is self documenting in org notation.
 Relative line numbers help with vim movements
 #+begin_src emacs-lisp
 (setq display-line-numbers-type t)
+(setq display-line-numbers 'relative)
 #+end_src
 * WSL Setup (Optional to Windors)
 On wsl the browser cant be located automatically.
