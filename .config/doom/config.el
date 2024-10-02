@@ -37,6 +37,7 @@
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
+(setq display-line-numbers 'relative)
 ;; Note this is accompanied by a line in ~/.bashrc of
 ;; export BROWSER="powershell.exe /C start"
 (setq browse-url-browser-function 'browse-url-generic
