@@ -104,7 +104,7 @@
         :desc "Org refile" "w" #'org-refile))
 
 (after! org
-  (setq org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(i)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
+  (setq org-todo-keywords '((sequence "TODO(t)" "NEXT TASK(n)" "IN PROGRESS(i)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
   )
 
 (use-package! org-roam
