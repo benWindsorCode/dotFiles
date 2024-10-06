@@ -14,8 +14,9 @@ alias master='git checkout master'
 #+end_src
 * PATH
 ** Emacs
-So that 'doom' commandline tool works
+So that 'doom' commandline tool works, with various iterations of emacs and doom over time, with the .config setup being the most recent
 #+begin_src shell
+export PATH="$HOME/.config/emacs/bin":$PATH
 export PATH="$HOME/.emacs.d/bin":$PATH
 export PATH="$HOME/.doom.d/bin":$PATH
 #+end_src
