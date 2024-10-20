@@ -1,5 +1,7 @@
 (setq display-line-numbers-type t)
-
+(setq display-line-numbers 'relative)
+;; Note this is accompanied by a line in ~/.bashrc of
+;; export BROWSER="powershell.exe /C start"
 (setq browse-url-browser-function 'browse-url-generic
  browse-url-generic-program "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe")
 
